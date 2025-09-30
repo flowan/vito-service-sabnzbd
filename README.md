@@ -1,11 +1,9 @@
-# Plugin template for VitoDeploy
+# SABnzbd plugin for VitoDeploy
 
-This is the basic skeleton of a VitoDeploy plugin that you can start with.
+This plugin will install SABnzbd as a service.
 
-## Documentation
+## Default settings
 
-You can find everything about Plugin development [here](https://vitodeploy.com/docs/plugins)
-
-## Discovery
-
-To make your plugin discoverable by the Vito app, add `vitodeploy-plugin` topic to your repository on GitHub.
+- Port: `8080`
+- Username: `vito`
+- Password: `vito`
