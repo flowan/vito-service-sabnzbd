@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:jcfp/sab-addons -y
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 sudo apt-get install sabnzbdplus par2-turbo -y
 
-sudo sed -i 's/USER=.*/USER=vito/g' /etc/default/sabnzbdplus
+sudo sed -i 's/USER=.*/USER=vito:media/g' /etc/default/sabnzbdplus
 
 sudo systemctl -q daemon-reload
 sudo systemctl enable --now -q sabnzbdplus
@@ -32,11 +32,5 @@ sudo mkdir -p /home/vito/media
 sudo mkdir -p /home/vito/media/downloads
 sudo mkdir -p /home/vito/media/downloads/complete
 sudo mkdir -p /home/vito/media/downloads/incomplete
-sudo chown vito:media /home/vito/media
-sudo chown vito:media /home/vito/media/downloads
-sudo chown vito:media /home/vito/media/downloads/complete
-sudo chown vito:media /home/vito/media/downloads/incomplete
-sudo chmod 775 /home/vito/media
-sudo chmod 775 /home/vito/media/downloads
-sudo chmod 775 /home/vito/media/downloads/complete
-sudo chmod 775 /home/vito/media/downloads/incomplete
+sudo chown vito:media -R /home/vito/media
+sudo chmod 755 -R /home/vito/media
